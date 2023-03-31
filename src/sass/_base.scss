@@ -1,0 +1,21 @@
+@use 'theme';
+
+/* base styles */
+// strict sizing
+// no pre-formatted padding or margins
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* page background */
+body {
+    background-color: theme.$white;
+}
+
+/* links */
+a {
+    color: black;
+}

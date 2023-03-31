@@ -1,0 +1,49 @@
+@use 'theme';
+
+
+// navbar container
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1em;
+
+	border-bottom: 1px solid black;
+}
+
+
+// logo on left
+nav > .logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+// navbar-items
+nav > .navbar-items {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+}
+nav > .navbar-items > a {
+	border-radius: 5px;
+	padding: 10%;
+}
+nav > .navbar-items > a:hover {
+	background-color: theme.$blue;
+}
+
+
+// menu dropdown when screen too narrow
+nav > .hamburger {
+	display: none;
+	user-select: none;
+}
+nav > .hamburger > input[type=checkbox] {
+	display: none;
+}
+nav > .hamburger-icon {
+	cursor: pointer;
+}
