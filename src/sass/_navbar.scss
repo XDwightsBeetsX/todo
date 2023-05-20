@@ -28,6 +28,7 @@ nav > .navbar-items {
 	justify-content: right;
 }
 nav > .navbar-items > a {
+	display: flex;
 	border-radius: 5px;
 	padding: 10%;
 }

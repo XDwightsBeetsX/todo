@@ -1,5 +1,74 @@
-
 @use 'theme';
 @use 'base';
 @use 'navbar';
 @use 'footer';
+
+
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+/* LIST */
+.todo-list {
+	@include flex-col;
+	width: 100%;
+}
+
+
+/* KANBAN */
+.todo-kanban {
+	@include flex-row;
+	width: 100%;
+
+	ol.kanban-list {
+		@include flex-col;
+		padding: .5rem;
+		width: 15%;
+		min-width: 8em;
+		list-style-type: none;
+	
+		.kanban-list-header {
+			@include flex-row;
+			justify-content: space-between;
+			height: 1.2rem;
+	
+			label {
+				width: 90%;
+				border-radius: 0.2rem;
+	
+				&:hover {
+					cursor: text;
+					border: 1px dashed theme.$grey;
+				}
+			}
+			a {
+				width: 10%;
+				padding-left: .3rem;
+	
+				&:hover {
+					cursor: pointer;
+					font-weight: bold;
+				}
+			}
+		}
+		li {
+			margin: .1em;
+			min-height: 1em;
+			background-color: theme.$grey;
+			border-radius: .2em;
+			box-shadow: .03em .03em .03em gray;
+	
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -7,6 +7,7 @@
   margin: 0px;
   padding: 0px;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* page background */
@@ -16,7 +17,7 @@ body {
 
 /* links */
 a {
-  color: black;
+  color: #000000;
 }
 
 nav {
@@ -41,6 +42,7 @@ nav > .navbar-items {
 }
 
 nav > .navbar-items > a {
+  display: flex;
   border-radius: 5px;
   padding: 10%;
 }
@@ -59,6 +61,72 @@ nav > .hamburger > input[type=checkbox] {
 }
 
 nav > .hamburger-icon {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* LIST */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* KANBAN */
+.todo-kanban {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+.todo-kanban ol.kanban-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  width: 15%;
+  min-width: 8em;
+  list-style-type: none;
+}
+.todo-kanban ol.kanban-list .kanban-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+  height: 1.2rem;
+}
+.todo-kanban ol.kanban-list .kanban-list-header label {
+  width: 90%;
+  border-radius: 0.2rem;
+}
+.todo-kanban ol.kanban-list .kanban-list-header label:hover {
+  cursor: text;
+  border: 1px dashed lightgray;
+}
+.todo-kanban ol.kanban-list .kanban-list-header a {
+  width: 10%;
+  padding-left: 0.3rem;
+}
+.todo-kanban ol.kanban-list .kanban-list-header a:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.todo-kanban ol.kanban-list li {
+  margin: 0.1em;
+  min-height: 1em;
+  background-color: lightgray;
+  border-radius: 0.2em;
+  box-shadow: 0.03em 0.03em 0.03em gray;
+}
+.todo-kanban ol.kanban-list li:hover {
   cursor: pointer;
 }
 
